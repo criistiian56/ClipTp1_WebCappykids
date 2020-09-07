@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<title>CappyKids</title>
 	<meta name="description" content="Esta es version web de prueba de Cappy Kids"/>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximun-scale=1,minimum-scale=1"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
 	<meta name="keywords" content="Cappy, cappykids, calzado para niños, calzado para bebe">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="shortcut icon" type="image/x-icon" href="imagenes/cappy.gif">
@@ -53,82 +53,80 @@
 			  <span class="carousel-control-next-icon"></span>
 			</a>
 		  </div>
-		  <article>
-			  <div class="container pt-4 my-4">
-				<div class="row">
-					<div class="col-md text-light">
-						<h3>Acerca de nosotros</h3>
-						<p class="fuente1">Nos dedicamos a la venta de calzado para bebés y niños desde el año 2018. Trabajamos desde el talle 13 (RN) hasta el talle 33. Nuestra especialidad: el calzado sublimado con los personajes que más les gustan a los niños y niñas.</p>
-						<address>
-							<a target="_blank" href="https://www.facebook.com/yohaYcristian/?modal=admin_todo_tour"><img src="imagenes/facebookicon.png" alt="imgCappy">  Visita nuestra pagína de facebook</a>
-						</address>
-					</div>
-					<div class="col-md">
-						<img src="imagenes/cappy.gif" class="mx-auto d-block" alt="imagencappy" id="imagencappy">
-					</div>
+		<article>
+			<div class="container pt-4 my-4">
+			<div class="row">
+				<div class="col-md text-light">
+					<h3>Acerca de nosotros</h3>
+					<p class="fuente1">Nos dedicamos a la venta de calzado para bebés y niños desde el año 2018. Trabajamos desde el talle 13 (RN) hasta el talle 33. Nuestra especialidad: el calzado sublimado con los personajes que más les gustan a los niños y niñas.</p>
+					<address>
+						<a target="_blank" href="https://www.facebook.com/yohaYcristian/?modal=admin_todo_tour"><img src="imagenes/facebookicon.png" alt="imgCappy">  Visita nuestra pagína de facebook</a>
+					</address>
 				</div>
-			  </div>
-			  <div class="container-fluid bg-light text-dark ">
-				<p class="fuente2"><b>ENVÍOS A TODO EL PAÍS</b> - Diseños únicos y originales desde San Francisco hasta la puerta de tu casa.</p>
-			  </div>
-			  <div class="container my-4">
-				  <img src="imagenes/mercadopago.png" class="img-fluid" id="imgmercadopago" alt="mercadopago">
-			  </div>
-			  <div class="container-fluid bg-light text-dark">
-				  <div class="container">
-					<h3>¿Te animas a jugar con nosotros?</h3>
-					<p>Intenta adivinar que talle es el más solicitado (entre 13 y 33). Sólo tienes 3 intentos posibles.</p>
-					<p>¿Cuál es tu nombre? <input class="text-center" type="text" id="nombre"></p>
-					<button type="button" class="btn btn-primary my-4" onclick="jugarAhora()">Jugar</button>
-					<p id="respuesta"></p>
-				  </div>
+				<div class="col-md">
+					<img src="imagenes/cappy.gif" class="mx-auto d-block" alt="imagencappy" id="imagencappy">
 				</div>
-				<script>
-					function jugarAhora() {
-			
-						var max = 33;
-						var min = 13;
-						var cant_intentos = 3;
-						var acerto = false;
-						var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
-						var numero;
-			
-						var nombre = document.getElementById("nombre").value;
+			</div>
+			</div>
+			<div class="container-fluid bg-light text-dark ">
+			<p class="fuente2"><b>ENVÍOS A TODO EL PAÍS</b> - Diseños únicos y originales desde San Francisco hasta la puerta de tu casa.</p>
+			</div>
+			<div class="container my-4">
+				<img src="imagenes/mercadopago.png" class="img-fluid" id="imgmercadopago" alt="mercadopago">
+			</div>
+			<div class="container-fluid bg-light text-dark">
+				<div class="container">
+				<h3>¿Te animas a jugar con nosotros?</h3>
+				<p>Intenta adivinar que talle es el más solicitado (entre 13 y 33). Sólo tienes 3 intentos posibles.</p>
+				<p>¿Cuál es tu nombre? <input class="text-center" type="text" id="nombre"></p>
+				<button type="button" class="btn btn-primary my-4" onclick="jugarAhora()">Jugar</button>
+				<p id="respuesta"></p>
+				</div>
+			</div>
+			<script>
+				function jugarAhora() {
+					var max = 33;
+					var min = 13;
+					var cant_intentos = 3;
+					var acerto = false;
+					var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
+					var numero;
+		
+					var nombre = document.getElementById("nombre").value;
 
-						if(nombre == "")
-						{
-							alert("Por favor, ingrese su nombre para comenzar el juego");
-						}
-						else
-						{
-							while(cant_intentos > 0 && acerto != true)
-							{
-								cant_intentos--;
-								numero = parseInt( prompt("Ingrese el número"));
-								if (numero == numero_aleatorio)
-								{
-									alert("EUREKA!!");
-									acerto = true;
-								}
-								else if (numero < numero_aleatorio)
-								{
-									alert("PISTA: es mayor");
-								}
-								else if (numero > numero_aleatorio)
-								{
-									alert("PISTA: es menor");
-								}
-								else
-								{
-									alert("Le quedan" + cant_intentos + "intentos");
-								}
-							}
-							document.getElementById("respuesta").innerHTML="El número era: <strong>" + numero_aleatorio + "</strong>"
-						}
+					if(nombre == "")
+					{
+						alert("Por favor, ingrese su nombre para comenzar el juego");
 					}
-				</script>
-			  </div>
-		  </article>
+					else
+					{
+						while(cant_intentos > 0 && acerto != true)
+						{
+							cant_intentos--;
+							numero = parseInt( prompt("Ingrese el número"));
+							if (numero == numero_aleatorio)
+							{
+								alert("CORRECTO!");
+								acerto = true;
+							}
+							else if (numero < numero_aleatorio)
+							{
+								alert("PISTA: es mayor");
+							}
+							else if (numero > numero_aleatorio)
+							{
+								alert("PISTA: es menor");
+							}
+							else
+							{
+								alert("Le quedan" + cant_intentos + "intentos");
+							}
+						}
+						document.getElementById("respuesta").innerHTML="El número era: <strong>" + numero_aleatorio + "</strong>"
+					}
+				}
+			</script>
+		</article>
  	</section>
 	<footer class="piePagina">
 	<div class="jumbotron" id="pie">
