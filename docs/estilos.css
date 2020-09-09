@@ -110,7 +110,7 @@ table.minimalistBlack {
 /*diseño para formulario de contacto*/
 form{
 	border: 1px solid black;
-	width:450px;
+	width:100%;
 	margin: auto;
 	padding: 10px 20px;
 	box-sizing: border-box;
@@ -210,7 +210,6 @@ max-width: 100%;
 }
 .cerrar {
 	display: block;
-	background: #fff;
 	width: 25px;
 	height: 25px;
 	margin: 15px auto;
