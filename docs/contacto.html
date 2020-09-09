@@ -39,22 +39,29 @@
 					<section class="contacto">
 						<div class="container">
 							<div class="row">
-								<form action="#">
+								<form action="#" class="was-validated">
 									<div class="form-group">
 										<hgroup>
-											<h4>CONTACTO</h4>
+											<h4>Contacto</h4>
 										</hgroup>
 										<input type="text" class="form-control" placeholder="Nombre" maxlength="25" id="texto" required>
+										<div class="valid-feedback">Correcto.</div>
+										<div class="invalid-feedback">*Campo obligatorio.</div>
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Enter email"
-										id="email">
-										</div>
-									<div class="form-group">
-										<input type="text" class="form-control" name="Telefono" placeholder="Teléfono" maxlength="11" required>
+										<input type="email" class="form-control" placeholder="Enter email" id="email" required>
+										<div class="valid-feedback">Correcto.</div>
+										<div class="invalid-feedback">*Campo obligatorio.</div>
 									</div>
 									<div class="form-group">
-										<textarea name="mensaje" class="form-control" placeholder="Escriba aquí su mensaje." id="" cols="30" rows="10"></textarea>
+										<input type="number" class="form-control" name="Telefono" placeholder="Teléfono" maxlength="11" required>
+										<div class="valid-feedback">Correcto.</div>
+										<div class="invalid-feedback">*Campo obligatorio.</div>
+									</div>
+									<div class="form-group">
+										<textarea name="mensaje" class="form-control" placeholder="Escriba aquí su mensaje." id="" cols="30" rows="10" required></textarea>
+										<div class="valid-feedback">Correcto.</div>
+										<div class="invalid-feedback">*Campo obligatorio.</div>
 									</div>
 									<button type="submit" class="btn btn-primary">Enviar</button>
 								</form>
@@ -71,6 +78,7 @@
 									</li>
 								</ul>
 							</address>
+						</div>	
 					</aside>
 				</div>
 			</div>
@@ -78,7 +86,7 @@
 		<footer class="piePagina">
 			<div class="jumbotron" id="pie">
 				<p>Derechos Reservados ©CristianGz 2020</p>
-			  </div>
+			</div>
 		</footer>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
